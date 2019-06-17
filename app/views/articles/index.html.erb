@@ -13,6 +13,7 @@
     <td><%= article.description %></td>
     <td><%= link_to 'Éditer', edit_article_path(article) %></td>
     <td><%= link_to 'Afficher', article_path(article) %></td>
+    <td><%= link_to 'Supprimer', article_path(article), method: :delete , data: {confirm: 'Confirmation'} %></td>
     </tr>
   <% end %>
 </table>
