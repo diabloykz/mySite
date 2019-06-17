@@ -1,9 +1,11 @@
 <h1>Contenu de l'article</h1>
 
 <p>
-  Title: <%= @article.title %>
+  Titre: <%= @article.title %>
 </p>
 <p>
   Description: <%= @article.description %>
 </p>
 
+<%= link_to "Éditer cet article", edit_article_path(@article)%> |
+<%= link_to "Retourner à la liste d'articles", articles_path%>
