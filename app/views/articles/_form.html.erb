@@ -1,12 +1,4 @@
-
-<% if @article.errors.any?%>
-<h2>les erreurs suivantes empêchent l'article d'être crée</h2>
-<ul>
-  <% @article.errors.full_messages.each do |msg|%>
-  <li><%= msg%></li>
-  <% end %>
-</ul>
-<% end %>
+<%= render 'shared/errors', object: @article %>
 
 <div class="row">
   <div class="col-xs-12">
