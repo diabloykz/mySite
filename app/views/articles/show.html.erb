@@ -1,11 +1,13 @@
-<h1>Contenu de l'article</h1>
-
-<p>
-  Titre: <%= @article.title %>
-</p>
-<p>
-  Description: <%= @article.description %>
-</p>
-
-<%= link_to "Éditer cet article", edit_article_path(@article)%> |
-<%= link_to "Retourner à la liste d'articles", articles_path%>
+<h2 align="center">Titre: <%= @article.title %> </h2>
+<div class="well col-xs-8 col-xs-offset-2">
+  <h4 class="center description"><strong>Description:</strong></h4>
+  <hr>
+  <%= simple_format(@article.description) %>
+  <div class="article-actions">
+    <%= link_to "Éditer cet article", edit_article_path(@article), class: "btn btn-xs btn-primary" %>
+    <%= link_to "Supprimer cet article", article_path(@article),  method: :delete,
+                                                                  data: {confirm: "Êtes-vous sur de vouloir supprimer cet article?"},
+                                                                  class: "btn btn-xs btn-danger"%>
+    <%= link_to "Retourner à la liste d'articles", articles_path , class: "btn btn-xs btn-success" %>
+  </div>
+</div>
