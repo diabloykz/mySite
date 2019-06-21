@@ -4,7 +4,7 @@
     <div class="panel panel-danger">
       <div class="panel-heading">
         <h2 class="panel-title">
-          <%= pluralize(object.errors.count, "Erreur")%> dans le formulaire. La sauvegarde ne s'est pas effectué correctement:
+          <%= pluralize(object.errors.count, 'Erreur', locale: :fr)%> dans le formulaire. La sauvegarde ne s'est pas effectuée correctement:
         </h2>
         <div class="panel-body">
           <ul>

@@ -10,8 +10,8 @@
           <%= truncate(article.description, length: 100) %>
           <div class="article-meta-details">
             <small>Crée par: <%= article.user.username if article.user %>,
-                  <%= time_ago_in_words(article.created_at) %> ago,
-                  mis à jour la plus récente: <%= time_ago_in_words(article.updated_at) %> ago
+                  Il y a <%= time_ago_in_words(article.created_at) %>.
+                  Mise à jour la plus récente: Il y a <%= time_ago_in_words(article.updated_at) %>
             </small>
           </div>
         </div>
