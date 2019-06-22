@@ -7,10 +7,11 @@ ruby '2.6.3'
 gem 'rails', '~> 5.2.3'
 # Localisation
 gem 'rails-i18n', '~> 5.1'
-
 # Encryption
 gem 'bcrypt', '~> 3.1.7'
-
+# Pagination
+gem 'will_paginate', '3.1.7'
+gem 'bootstrap-will_paginate', '1.0.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
