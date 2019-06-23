@@ -40,10 +40,14 @@ class UsersController < ApplicationController
 
   def destroy
     @user = User.find(params[:id])
-    
-    @user.destroy
-    flash[:danger] = "L'utilisateur et tous les articles qui lui sont associés ont été supprimé"
-    redirect_to users_path
+    if @user != current_user
+      @user.destroy
+      flash[:danger] = "L'utilisateur et tous les articles qui lui sont associés ont été supprimé"
+      redirect_to users_path
+    else
+      flash[:danger] = "Désactiver le rôle administrateur avant de supprimer ce compte"
+      redirect_to users_path
+    end
   end
 
   private
