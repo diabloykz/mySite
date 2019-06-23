@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :articles
+  has_many :articles, dependent: :destroy # Si un utilisateur est supprimé par l'admin , tous ses articles le seront également
   before_save { self.email = email.downcase } # avant la sauvegarde dans la BD, on met l'email en minuscule
   validates :username, presence: true,
   uniqueness: {case_sensitive: false},
