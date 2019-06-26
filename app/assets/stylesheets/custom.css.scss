@@ -3,6 +3,7 @@ $navbar-default-bg: black;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
 #logo{
   float: left;
   font-size: 1.7em;
@@ -19,6 +20,10 @@ $navbar-default-bg: black;
 .center {
   text-align: center;
 }
+
+// -----------------------------------------------------------
+// Jumbotron
+// -----------------------------------------------------------
 
 .jumbotron {
   background-image: asset-url('cover_page.jpg');
@@ -40,6 +45,9 @@ $navbar-default-bg: black;
   background-color: black;
 }
 
+// -----------------------------------------------------------
+// Articles
+// -----------------------------------------------------------
 .article-meta-details{
   border-top: 1px solid #eaeaea;
   margin-top: 15px;
@@ -69,6 +77,91 @@ $navbar-default-bg: black;
   list-style: none;
   padding-left: 0;
 }
+
+// -----------------------------------------------------------
+// Badges catégories
+// -----------------------------------------------------------
+
+.badge {
+  background-color: #F4A898;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+.badge a{
+  color: #952A2B;
+}
+
+.badge a:hover{
+  color: #F9F4F2;
+  text-decoration: none;
+}
+
+// -----------------------------------------------------------
+// Custom Checkboxes
+// -----------------------------------------------------------
+
+.input_checkbox {
+  width: auto !important;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.input_checkbox input{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 9px;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: #eee;
+  border: 1px solid #28608F;
+}
+
+.input_checkbox:hover input ~ .checkmark{
+  background-color: #ccc;
+}
+
+.input_checkbox input:checked ~ .checkmark{
+  background-color: #28608F;
+}
+
+.checkmark:after{
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.input_checkbox input:checked ~ .checkmark:after{
+  display: block;
+}
+
+.input_checkbox .checkmark:after{
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+// -----------------------------------------------------------
+// Footer
+// -----------------------------------------------------------
 
 footer {
   margin-top: 45px;
