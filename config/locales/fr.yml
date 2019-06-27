@@ -10,6 +10,15 @@ fr:
             dépendants existent
     models:
       user: Utilisateur
+    attributes:
+      user:
+        username: Nom d'utilisateur
+        password: Mot de passe
+      article:
+        title: Titre
+        description: Contenu
+      category:
+        name: Nom
   date:
     abbr_day_names:
     - dim
