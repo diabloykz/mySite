@@ -16,7 +16,7 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       flash[:success]= "Bienvenue sur Tahiti Web Services #{@user.username}"
-      redirect_to users_path(@user)
+      redirect_to user_path(@user)
     else
       render 'new'
     end
